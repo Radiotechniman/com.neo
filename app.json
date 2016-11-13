@@ -9,7 +9,8 @@
 		"en": "NEO Sensors"
 	},
 	"category": [
-		"appliances"
+		"appliances",
+		"lights"
 	],
 	"images": {
 		"large": "/assets/images/large.jpg",
@@ -86,6 +87,92 @@
 						}
 				}
 		]
-	}
+	},
+		{
+			"id": "NAS-WR01ZE",
+			"name": {
+				"en": "NEO Wall Plug"
+			},
+			"zwave": {
+				"manufacturerId": 600,
+				"productTypeId": 3,
+				"productId": 4231,
+				"learnmode": {
+					"image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
+					"instruction": {
+						"en": "Press the button on your NEO Wall Plug three times",
+						"nl": "Druk driemaal op de knop op de NEO Wall Plug"
+					}
+				},
+				"associationGroups": [ 1 ]
+			},
+			"class": "socket",
+			"capabilities": [
+				"onoff",
+				"measure_power"
+			],
+			"images": {
+				"large": "/drivers/NAS-WR01ZE/assets/images/large.jpg",
+				"small": "/drivers/NAS-WR01ZE/assets/images/small.jpg"
+			},
+			"settings": [
+				{
+				    "id": "meter_report",
+				    "type": "checkbox",
+				    "label": {
+					    "en": "Meter Report",
+						"nl": "Meter Report"
+				    },
+				    "value": true,
+				    "hint": {
+					    "en": "This will Disable/Enable meter report measure data to controller.",
+						"nl": "Dit zal meter rapportages inschakelen naar controller."
+				    }
+			    },
+				{
+					"id": "meter_report_interval",
+					"type": "number",
+					"attr": {
+						"min": 60,
+						"max": 3600
+					},
+					"value": 120,
+					"label": {
+						"en": "Meter Report Interval (s)",
+						"nl": "Meter Report Interval (s)"
+					},
+					"hint": {
+						"en": "The amount of seconds between a Meter Report being send to controller.",
+						"nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden."
+					}
+				},
+				{
+				    "id": "led_display",
+				    "type": "checkbox",
+				    "label": {
+					    "en": "State indication Led",
+						"nl": "Status indicatie Led"
+				    },
+				    "value": true,
+				    "hint": {
+					    "en": "This will Disable/Enable the status led on top.",
+						"nl": "Hiermee schakelt u de functie van de status led aan of uit."
+				    }
+			    },
+				{
+				    "id": "remeber_state",
+				    "type": "checkbox",
+				    "label": {
+					    "en": "Return to last known state after power loss",
+						"nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+				    },
+				    "value": true,
+				    "hint": {
+					    "en": "After power loss the state of the relay will switch to last known.",
+						"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
+				    }
+			    }
+		]
+}
 	]
 }
