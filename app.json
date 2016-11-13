@@ -28,7 +28,7 @@
 		"email": "naam2@hotmail.com"
 	}],
  	"drivers": [
-		  {
+		{
 			"id": "NAS-DS01Z",
 			"name": {
 			"en": "NEO Door Sensor"
@@ -45,9 +45,10 @@
 				},
 				"associationGroups": [ 1 ]
 			},
-			"class": "alarm_contact",
+			"class": "sensor",
 			"capabilities": [
 				"alarm_contact",
+				"alarm_battery",
 				"measure_battery"
 			],
 			"images": {
@@ -55,8 +56,8 @@
 				"small": "/drivers/NAS-DS01Z/assets/images/small.jpg"
 			},
 			"settings": [{
-				    "id": "off_delay",
-				    "type": "number",
+				"id": "off_delay",
+				"type": "number",
 						"attr": {
 							"min" : 0,
 							"max" : 65535
@@ -85,22 +86,6 @@
 						}
 				}
 		]
-	}],
-	"flow": {
-		"triggers": [
-            {
-                "id": "turned_on",
-                "title": {
-                    "en": "Turned on"
-                },
-                "args": [
-                    {
-                        "name": "device",
-                        "type": "device",
-                        "filter": "driver_id=NAS-DS01Z/driver.js"
-                    }
-                ]
-						}
-			]
 	}
+	]
 }
