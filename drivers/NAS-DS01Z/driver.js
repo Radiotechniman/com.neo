@@ -3,6 +3,11 @@
 const path			= require('path');
 const ZwaveDriver	= require('homey-zwavedriver');
 
+//driver for the NEO Coolcam NAS-DS01Z device
+//http://www.pepper1.net/zwavedb/device/893
+//created by Niels van Gelderen :-)
+//----- dus ------
+
 module.exports = new ZwaveDriver( path.basename(__dirname), {
 	capabilities: {
 		'alarm_contact': {
