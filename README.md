@@ -15,8 +15,10 @@ NAS-DS01Z
 
 ## ToDo:
 
+Add more devices
+
 NAS-WR01ZE 
 - Power Usage not always reporting
 
 NAS-DS01Z
-- Being able to get the on/off status and doing something with it
+- Cleaning the code a bit more
